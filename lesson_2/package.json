@@ -1,0 +1,23 @@
+{
+  "name": "lesson_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cli": "webpack ./application/index.js --output-path ./public/js --output-filename bundle.js --mode=development --color --watch --module-bind js=babel-loader"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/itea.-js-prof.-05-2019/lesson_2/issues"
+  },
+  "homepage": "https://gitlab.com/itea.-js-prof.-05-2019/lesson_2#readme",
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
+}

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+body {
+  position: relative;
+  font-family: "Noto Sans", sans-serif;
+}
+ul{ list-style-type: none;}
+a{ color: #1E82D3;}
+a:hover { color: #6375ab;}
+.post-wrapper {
+    width: 50%;
+    margin: 15px auto;
+    padding: 10px;
+    border: 2px solid #eee;
+    display: flex;
+}
+.post-content-wrapper{margin-left: 10px;}
+.post-img{
+  width: 200px;
+}
+.post-link{
+  vertical-align: top;
+  font-weight: bold;
+  font-size: 30px;
+}
+.icon{
+  cursor: pointer;
+}
