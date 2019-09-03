@@ -20,6 +20,7 @@ class Zoo {
   }
 
   removeAnimal(animal){
+    this.animalCount -= 1;
     const animalObj = this.findAnimals("name", animal.name);
     const {zone, name} = animalObj;
     const result = this.zones[zone].filter(foundAnimal => foundAnimal.name !== name);

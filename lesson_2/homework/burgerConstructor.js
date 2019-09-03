@@ -24,6 +24,7 @@
         }
       }
 
+
       Результатом конструктора нужно вывести массив меню c добавленными элементами.
       // menu: [ {name: "", composition: [], cookingTime:""},  {name: "", composition: [], cookingTime:""}]
 
@@ -87,10 +88,26 @@
   var OurMenu = [];
   var OurOrders = [];
 
-  function Burger( name, ingredients, cookingTime){
-    // {...}
+  function Burger (name, composition, cookingTime){
+    this.name = name;
+    this.composition = composition;
+    this.cookingTime = cookingTime;     // Время на готовку
+  }
+  Burger.prototype = {
+    showComposition: function(){
+      let {composition, name} = this;
+      let compositionLength = composition.length;
+      if( compositionLength !== 0){
+        composition.map( function( item ){
+            console.log( 'Состав бургера', name, item );
+        })
+      }
+    }
   }
 
   function Order(name, condition, value){
     // {...}
   }
+
+  const burger = new Burger("Hamburger", Ingredients, 20);
+  burger.showComposition();

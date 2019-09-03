@@ -1,6 +1,9 @@
-body{
-  font-family: arial;
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+body {
+  position: relative;
+  font-family: "Noto Sans", sans-serif;
 }
+input{border: 0; outline: none}
 img{
   max-width: 100%;
   height: auto;
@@ -11,6 +14,12 @@ img{
   background: #eee;
   display: flex;
   justify-content: center;
+}
+.post_wrapper {
+    width: 70%;
+    margin: 15px auto;
+    padding: 10px;
+    border: 2px solid #eee;
 }
 .feed{
   width: 600px;
@@ -23,6 +32,5 @@ img{
 }
 
 .post__title{
-  font-size: 2rem;
-  font-weight: 800;
+  width: 100%;
 }

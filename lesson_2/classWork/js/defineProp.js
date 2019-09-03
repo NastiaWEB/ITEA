@@ -39,18 +39,14 @@
 
 class Dog {
   constructor(name, breed, weight, isGoodBoy = true){
-    this.Obj = {weight}
-    this.edditedObj = Object.create(this.Obj,{
+    return Object.create({},{
+      weight: { value: weight },
       name: { value: name  },
       breed: { value: breed },
       isGoodBoy: { value: isGoodBoy, enumerable: true }
     });
   }
-  getObj(){
-    console.log(this.edditedObj);
-  }
 };
 
 const myObj = new Dog("Rex", "Akita", 34);
-
-myObj.getObj();
+console.log(myObj);
