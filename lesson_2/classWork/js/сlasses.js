@@ -131,7 +131,6 @@ function displayAdv(quantity, item){
   let selectedChild;
   for(let i = 0; i < quantity; i++){
     selectedChild =  document.getElementById("posts_feed").children[2+i];
-    console.log(selectedChild);
   }
   selectedChild.insertAdjacentHTML("afterEnd", item)
 }
