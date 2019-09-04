@@ -92,6 +92,7 @@
     this.name = name;
     this.composition = composition;
     this.cookingTime = cookingTime;     // Время на готовку
+    this.addNewBurger()
   }
   Burger.prototype = {
     showComposition: function(){
@@ -102,12 +103,21 @@
             console.log( 'Состав бургера', name, item );
         })
       }
-    }
+    },
+    addNewBurger: function () {
+      let {composition, name, cookingTime} = this;
+      OurMenu.push({name, composition, cookingTime})}
   }
 
   function Order(name, condition, value){
-    // {...}
+      this.id,
+      orderNumber: "",
+      orderBurder: "",
+      orderException: "",
+      orderAvailability: ""
   }
 
-  const burger = new Burger("Hamburger", Ingredients, 20);
-  burger.showComposition();
+  createBurgers(){
+    const burger = new Burger("Hamburger", ['Булка','Огурчик', 'Котлетка', 'Бекон',], 20);
+    burger.showComposition();
+  }
