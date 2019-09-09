@@ -1,5 +1,3 @@
-
-
   /*
 
     Задание:
@@ -85,8 +83,8 @@
     "Майонез"
   ];
 
-  var OurMenu = [];
-  var OurOrders = [];
+  let OurMenu = [];
+  let OurOrders = [];
 
   // Burger constructor
   function Burger(name, composition, cookingTime) {
