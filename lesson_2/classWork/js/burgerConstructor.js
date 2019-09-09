@@ -129,33 +129,34 @@
           `Бургер ${name}, ${ingredientPhrase} будет готов через ${cookingTime} минут`
         );
       };
-
+ // Ищем существует ли бургер
       const findBurger = (condition) => {
-
         let exists = [];
-
-        function filterItems(arr, query) {
+        // Ищем перечисленные ингредиенты в меню
+        function filterIng(arr, query) {
           return arr.filter(function(el) {
               return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
           })
         };
-
+        // Смотрим есть ли в нашем меню бургер
         OurMenu.map(burger => {
-          let filtred = filterItems(burger.composition, ingredient);
+          let filtred = filterIng(burger.composition, ingredient);
           const isHasCondition = condition ? filtred.length > 0 : filtred.length < 1;
           if (isHasCondition){exists.push(burger)}
         });
-
+        // Если нет
         if(exists.length < 1){
           console.log(" К сожалению, у нас нет такого бургера");
-        }else{
+        }
+        // Если есть показываем
+        else{
           exists.map(burger => {
             const { name, cookingTime } = burger;
             return showOrder({name, cookingTime})
           })
         }
       };
-
+// Проверяем, какой из 3 заказов нам прислали
       if (!condition && !ingredient && name) {
         const { cookingTime } = OurMenu.find(e => e.name === name);
         showOrder({ name, cookingTime });
